@@ -1,10 +1,13 @@
-import * as React from "react"
-import "./Home.css"
+import * as React from 'react';
+import './Home.css';
 
-export default function Home() {
+export default function Home({ classListing }) {
   return (
     <div className="home">
-      <p>Home</p>
+      <div>Home</div>
+      {/* {classListing.map((listing) => {
+        return <div>{listing.name}</div>;
+      })} */}
     </div>
-  )
+  );
 }
