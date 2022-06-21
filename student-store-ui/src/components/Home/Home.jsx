@@ -1,13 +1,12 @@
 import * as React from 'react';
 import './Home.css';
+import ProductGrid from '../ProductGrid/ProductGrid';
 
-export default function Home({ classListing }) {
+export default function Home({ products }) {
   return (
     <div className="home">
       <div>Home</div>
-      {/* {classListing.map((listing) => {
-        return <div>{listing.name}</div>;
-      })} */}
+      <ProductGrid products={products}/>
     </div>
   );
 }

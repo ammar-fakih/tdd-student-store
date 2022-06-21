@@ -1,0 +1,12 @@
+.product-card {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  height: 350px;
+  margin: 20px;
+}
+
+.product-image {
+  height: 250px;
+}

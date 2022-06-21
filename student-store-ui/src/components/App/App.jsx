@@ -11,15 +11,14 @@ import NotFound from '../NotFound/NotFound';
 const MAIN_END_POINT = `https://codepath-store-api.herokuapp.com/store`;
 
 export default function App() {
-  const [classListing, setClassListing] = React.useState([]);
+  const [products, setProducts] = React.useState([]);
 
   React.useEffect(async () => {
     const response = await fetch(
       `https://codepath-store-api.herokuapp.com/store`
     );
     const json = await response.json();
-    console.log(json);
-    setClassListing(json.products);
+    setProducts(json.products);
   }, []);
 
   return (
@@ -29,7 +28,7 @@ export default function App() {
         <Navbar />
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home products={products}/>} />
           <Route path="/products/:productId" element={<ProductDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
