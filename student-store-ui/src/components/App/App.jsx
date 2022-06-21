@@ -27,6 +27,7 @@ export default function App() {
       <main>
       <BrowserRouter>
         <Navbar />
+        <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products/:productId" element={<ProductDetail />} />
