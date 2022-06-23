@@ -1,12 +1,23 @@
 import * as React from 'react';
 import './Home.css';
 import ProductGrid from '../ProductGrid/ProductGrid';
+import Hero from "../Hero/Hero"
 
-export default function Home({ products }) {
+export default function Home({
+  products,
+  handleAddItemToCart,
+  handleRemoveItemFromCart,
+  shoppingCart
+}) {
   return (
     <div className="home">
-      <div>Home</div>
-      <ProductGrid products={products}/>
+      <Hero />
+      <ProductGrid
+        handleAddItemToCart={handleAddItemToCart}
+        handleRemoveItemFromCart={handleRemoveItemFromCart}
+        products={products}
+        shoppingCart={shoppingCart}
+      />
     </div>
   );
 }

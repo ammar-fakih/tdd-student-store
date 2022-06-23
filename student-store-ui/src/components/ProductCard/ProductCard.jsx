@@ -1,14 +1,59 @@
 import React from 'react';
-import "./ProductCard.css"
+import { Link } from 'react-router-dom';
+import './ProductCard.css';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({
+  product,
+  handleAddItemToCart,
+  handleRemoveItemFromCart,
+  showDescription,
+  setShowDescription,
+  shoppingCart,
+}) => {
   return (
     <div className="product-card">
-      <img className="product-image" src={product.image} />
-      <div className="product-name">{product.name}</div>
-      <div className="product-price">{product.price}</div>
-      <button className="add">Add</button>
-      <button className="remove">Remove</button>
+      <div className="image-container">
+        <Link to={`/products/${product.id}`}>
+          <img className="product-image" src={product.image} />
+        </Link>
+      </div>
+      <div class="product-info">
+        <div class="main-info">
+          <div className="product-name">{product.name}</div>
+          <div className="product-price">{product.price}</div>
+        </div>
+        <div className="actions">
+          <div className="buttons">
+            <button
+              className="add"
+              onClick={() => {
+                handleAddItemToCart(product.id);
+              }}>
+              <i class="material-icons">add</i>
+            </button>
+            <button
+              className="remove"
+              onClick={() => {
+                handleRemoveItemFromCart(product.id);
+              }}>
+              <i class="material-icons">remove</i>
+            </button>
+          </div>
+
+          {shoppingCart.find((item) => item.productId === product.id) && (
+            <span className="added-items">
+              {
+                shoppingCart.find((item) => item.productId === product.id)
+                  .quantity
+              }
+            </span>
+          )}
+
+          {showDescription === product.id && (
+            <div className="showDescription">{product.description}</div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
