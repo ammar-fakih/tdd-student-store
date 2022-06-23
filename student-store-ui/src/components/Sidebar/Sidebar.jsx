@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ShoppingCart from './ShoppingCart/ShoppingCart';
 import './Sidebar.css';
 
 export default function Sidebar({
@@ -12,23 +13,11 @@ export default function Sidebar({
 }) {
   return (
     <section className="sidebar">
-      <div className="sidenav" style={{ width: isOpen ? '400px' : 0 }}>
+      <div className="sidenav" style={{ width: isOpen ? '600px' : 0 }}>
         <div className="closebtn" onClick={handleOnToggle}>
           &times;
         </div>
-        <div
-          style={{
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-around',
-          }}>
-          <div>Shopping Cart</div>
-          <i class="material-icons md-48">add_shopping_cart</i>
-        </div>
-        <div style={{ fontSize: '1rem' }}>
-          No items added to cart yet. Start shopping now!
-        </div>
+        <ShoppingCart shoppingCart={shoppingCart} />
       </div>
 
       <div className="sidebar-closed">
@@ -39,6 +28,7 @@ export default function Sidebar({
           arrow_forward
         </i>
       </div>
+      <div id="blur" style={{ display: isOpen ? 'block' : 'none' }} onClick={handleOnToggle}></div>
     </section>
   );
 }

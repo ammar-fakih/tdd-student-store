@@ -27,14 +27,14 @@ const ProductCard = ({
             <button
               className="add"
               onClick={() => {
-                handleAddItemToCart(product.id);
+                handleAddItemToCart(product.id, product.price, product.name);
               }}>
               <i class="material-icons">add</i>
             </button>
             <button
               className="remove"
               onClick={() => {
-                handleRemoveItemFromCart(product.id);
+                handleRemoveItemFromCart(product.id, product.price);
               }}>
               <i class="material-icons">remove</i>
             </button>

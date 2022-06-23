@@ -20,8 +20,6 @@ export default function App() {
   const [shoppingCartPrice, setShoppingCartPrice] = React.useState(0);
   const [checkoutForm, setCheckoutForm] = React.useState({});
 
-  console.log(shoppingCart)
-
   React.useEffect(async () => {
     try {
       const response = await axios.get(`${MAIN_END_POINT}/store`);
@@ -46,7 +44,8 @@ export default function App() {
     setIsOpen(!isOpen);
   };
 
-  const handleAddItemToCart = (productId) => {
+  const handleAddItemToCart = (productId, price, name) => {
+    setShoppingCartPrice(shoppingCartPrice + price);
     for (let i = 0; i < shoppingCart.length; i++) {
       if (shoppingCart[i].productId === productId) {
         shoppingCart[i].quantity++;
@@ -54,10 +53,10 @@ export default function App() {
         return;
       }
     }
-    setShoppingCart([{ productId, quantity: 1 }, ...shoppingCart]);
+    setShoppingCart([...shoppingCart, { productId, quantity: 1, price, name }]);
   };
 
-  const handleRemoveItemFromCart = (productId) => {
+  const handleRemoveItemFromCart = (productId, price) => {
     for (let i = 0; i < shoppingCart.length; i++) {
       if (shoppingCart[i].productId === productId) {
         if (shoppingCart[i].quantity === 1) {
@@ -65,7 +64,7 @@ export default function App() {
         } else {
           shoppingCart[i].quantity--;
         }
-
+        setShoppingCartPrice(shoppingCartPrice - price);
         setShoppingCart([...shoppingCart]);
         return;
       }
@@ -106,7 +105,17 @@ export default function App() {
                 />
               }
             />
-            <Route path="/products/:productId" element={<ProductDetail />} />
+            <Route
+              path="/products/:productId"
+              element={
+                <ProductDetail
+                  handleAddItemToCart={handleAddItemToCart}
+                  handleRemoveItemFromCart={handleRemoveItemFromCart}
+                  shoppingCart={shoppingCart}
+                  MAIN_END_POINT={MAIN_END_POINT}
+                />
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
