@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
 
+const round = (num) => {
+  return Number(Math.round(num + 'e2') + 'e-2');
+};
+
 const ShoppingCart = ({ shoppingCart }) => {
   return (
     <div className="shopping-cart">
@@ -11,7 +15,7 @@ const ShoppingCart = ({ shoppingCart }) => {
           justifyContent: 'space-around',
         }}>
         <div className="sidebar-title">Shopping Cart</div>
-        <i class="material-icons md-48">add_shopping_cart</i>
+        <i className="material-icons md-48">add_shopping_cart</i>
       </div>
       {shoppingCart.length === 0 ? (
         <div style={{ fontSize: '1rem', margin: 20 }}>
@@ -32,24 +36,28 @@ export default ShoppingCart;
 const Table = ({ shoppingCart }) => {
   return (
     <table className="CartTable">
-      <tr class="header">
-        <th class="flex-2">Name</th>
-        <th class="center">Quantity</th>
-        <th class="center">Unit Price</th>
-        <th class="center">Cost</th>
-      </tr>
-      {shoppingCart.map((item) => {
-        return (
-          <tr class="product-row">
-            <td class="flex-2 cart-product-name">{item.name}</td>
-            <td class="center cart-product-quantity">{item.quantity}</td>
-            <td class="center cart-product-price">{item.price}</td>
-            <td class="center cart-product-subtotal">
-              {item.price * item.quantity}
-            </td>
-          </tr>
-        );
-      })}
+      <thead>
+        <tr className="header">
+          <th className="flex-2">Name</th>
+          <th className="center">Quantity</th>
+          <th className="center">Unit Price</th>
+          <th className="center">Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        {shoppingCart.map((item, i) => {
+          return (
+            <tr className="product-row" key={i}>
+              <td className="flex-2 cart-product-name">{item.name}</td>
+              <td className="center cart-product-quantity">{item.quantity}</td>
+              <td className="center cart-product-price">${item.price}</td>
+              <td className="center cart-product-subtotal">
+                ${round(item.price * item.quantity)}
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
     </table>
   );
 };
@@ -74,11 +82,11 @@ const CostSummary = ({ shoppingCart }) => {
       </tr>
       <tr className="summary-row">
         <td>Taxes and Fees</td>
-        <td>${subtotal * 0.875}</td>
+        <td>${round(subtotal * 0.875)}</td>
       </tr>
       <tr className="summary-row">
         <td>Total</td>
-        <td>${subtotal + subtotal * 0.875}</td>
+        <td>${round(subtotal + subtotal * 0.875)}</td>
       </tr>
     </table>
   );

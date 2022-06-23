@@ -12,7 +12,6 @@ const ProductDetail = ({
 }) => {
   const [currentProduct, setCurrentProduct] = React.useState({});
   const [error, setError] = React.useState(true);
-  const [quantity, setQuantity] = React.useState(0);
   let { productId } = useParams();
 
   useEffect(async () => {
@@ -48,6 +47,7 @@ const ProductView = ({
   handleAddItemToCart,
   handleRemoveItemFromCart,
 }) => {
+console.log(shoppingCart)
   return (
     <div className="product-detail">
       <div>
@@ -56,8 +56,8 @@ const ProductView = ({
       <div>{currentProduct.name}</div>
       <div>
         Quantity:{' '}
-        {shoppingCart.find((item) => item.id === currentProduct.id)
-          ? shoppingCart.find((item) => item.id === currentProduct.id).quantity
+        {shoppingCart.find((item) => item.productId === currentProduct.id)
+          ? shoppingCart.find((item) => item.productId === currentProduct.id).quantity
           : 0}
       </div>
       <div>

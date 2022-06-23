@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-contents">
         <Logo />
-        <div><NavLink to="/">Home</NavLink></div>
+        <div><NavLink style={{textDecoration: "none", color: "white"}} to="/">Home</NavLink></div>
         <div>About Us</div>
         <div>Contact Us</div>
         <div>Buy Now</div>

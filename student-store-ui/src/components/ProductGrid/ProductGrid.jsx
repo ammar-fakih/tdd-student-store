@@ -6,7 +6,7 @@ const ProductGrid = ({
   products,
   handleAddItemToCart,
   handleRemoveItemFromCart,
-  shoppingCart
+  shoppingCart,
 }) => {
   const [showDescription, setShowDescription] = React.useState();
   return (
@@ -16,6 +16,7 @@ const ProductGrid = ({
         {products.map((product) => {
           return (
             <ProductCard
+              key={product.id}
               product={product}
               handleAddItemToCart={handleAddItemToCart}
               handleRemoveItemFromCart={handleRemoveItemFromCart}

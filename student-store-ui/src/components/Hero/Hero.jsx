@@ -5,8 +5,8 @@ import Icon from "../../student_store_icon.18e5d61a.svg"
 const Hero = () => {
   return (
     <div className="hero">
-      <div class="content">
-        <div class="intro">
+      <div className="content">
+        <div className="intro">
           <h1>Welcome!</h1>
           <h1>Find Your Merch!</h1>
           <p>
@@ -14,11 +14,11 @@ const Hero = () => {
             filling up your shopping cart. Checkout whenever you're ready.
           </p>
         </div>
-        <div class="media">
+        <div className="media">
           <img
             src={Icon}
             alt="hero"
-            class="hero-img"
+            className="hero-img"
           />
         </div>
       </div>
