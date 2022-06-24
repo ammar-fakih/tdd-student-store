@@ -1,4 +1,5 @@
 import * as React from 'react';
+import CheckoutForm from './CheckoutForm/CheckoutForm';
 import ShoppingCart from './ShoppingCart/ShoppingCart';
 import './Sidebar.css';
 
@@ -18,6 +19,11 @@ export default function Sidebar({
           &times;
         </div>
         <ShoppingCart shoppingCart={shoppingCart} />
+        <CheckoutForm
+          checkoutForm={checkoutForm}
+          handleOnCheckoutFormChange={handleOnCheckoutFormChange}
+          handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+        />
       </div>
 
       <div className="sidebar-closed">
@@ -28,7 +34,10 @@ export default function Sidebar({
           arrow_forward
         </i>
       </div>
-      <div id="blur" style={{ display: isOpen ? 'block' : 'none' }} onClick={handleOnToggle}></div>
+      <div
+        id="blur"
+        style={{ display: isOpen ? 'block' : 'none' }}
+        onClick={handleOnToggle}></div>
     </section>
   );
 }

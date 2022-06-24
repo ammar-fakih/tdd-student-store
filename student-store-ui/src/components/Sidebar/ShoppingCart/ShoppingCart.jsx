@@ -12,9 +12,9 @@ const ShoppingCart = ({ shoppingCart }) => {
           width: '100%',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-around',
+          justifyContent: 'center',
         }}>
-        <div className="sidebar-title">Shopping Cart</div>
+        <h1>Shopping Cart</h1>{' '}
         <i className="material-icons md-48">add_shopping_cart</i>
       </div>
       {shoppingCart.length === 0 ? (

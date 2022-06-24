@@ -19,7 +19,10 @@ export default function App() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [shoppingCart, setShoppingCart] = React.useState([]);
   const [shoppingCartPrice, setShoppingCartPrice] = React.useState(0);
-  const [checkoutForm, setCheckoutForm] = React.useState({});
+  const [checkoutForm, setCheckoutForm] = React.useState({
+    name: '',
+    email: '',
+  });
   const [filter, setFilter] = React.useState('All Categories');
   const [searchQuery, setSearchQuery] = React.useState('');
 
@@ -74,11 +77,12 @@ export default function App() {
     }
   };
 
-  const handleOnCheckoutFormChange = (name, value) => {
-    setCheckoutForm({ name, value });
+  const handleOnCheckoutFormChange = (name, email) => {
+    setCheckoutForm({ name, email });
   };
 
   const handleOnSubmitCheckoutForm = () => {
+    setCheckoutForm({ name: '', email: '' });
     // TODO: complete this
   };
 
@@ -101,7 +105,7 @@ export default function App() {
             products={products}
             checkoutForm={checkoutForm}
             handleOnCheckoutFormChange={handleOnCheckoutFormChange}
-            handleOnSubmitCheckoutForm={handleOnCheckoutFormChange}
+            handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
           />
           <Routes>
             <Route

@@ -1,0 +1,16 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout input {
+  width: 80%;
+  height: 2rem;
+ margin: 10px;
+}
+
+.checkout button {
+  height: 2rem;
+  margin: 10px 20px;
+}
