@@ -6,5 +6,11 @@
   justify-content: center;
 }
 
-.product-detail > img {
+.product-detail> img {
+  max-height: 600px;
+}
+
+.product-detail > div,
+.product-detail > div > button  {
+  margin: 10px
 }

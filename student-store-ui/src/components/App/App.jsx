@@ -8,6 +8,7 @@ import Home from '../Home/Home';
 import './App.css';
 import ProductDetail from '../ProductDetail.jsx/ProductDetail';
 import NotFound from '../NotFound/NotFound';
+import Hero from '../Hero/Hero';
 
 const MAIN_END_POINT = `https://codepath-store-api.herokuapp.com`;
 
@@ -19,6 +20,8 @@ export default function App() {
   const [shoppingCart, setShoppingCart] = React.useState([]);
   const [shoppingCartPrice, setShoppingCartPrice] = React.useState(0);
   const [checkoutForm, setCheckoutForm] = React.useState({});
+  const [filter, setFilter] = React.useState('All Categories');
+  const [searchQuery, setSearchQuery] = React.useState('');
 
   React.useEffect(async () => {
     try {
@@ -84,6 +87,13 @@ export default function App() {
       <main>
         <BrowserRouter>
           <Navbar />
+          <Hero />
+          <SubNavbar setFilter={setFilter} filter={filter} />
+          <SearchBar
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
+
           <Sidebar
             handleOnToggle={handleOnToggle}
             isOpen={isOpen}
@@ -98,6 +108,10 @@ export default function App() {
               path="/"
               element={
                 <Home
+                  filter={filter}
+                  setFilter={setFilter}
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
                   products={products}
                   handleAddItemToCart={handleAddItemToCart}
                   handleRemoveItemFromCart={handleRemoveItemFromCart}
@@ -123,3 +137,37 @@ export default function App() {
     </div>
   );
 }
+
+const SubNavbar = ({ filter, setFilter }) => {
+  const categories = ['All Categories', 'Food', 'Accessories', 'Tech'];
+  return (
+    <div className={`sub-navbar`}>
+      {categories.map((item, i) => {
+        return (
+          <button
+            key={i}
+            id={`${filter === item ? 'selected-filter' : ''}`}
+            onClick={() => {
+              setFilter(item);
+            }}>
+            {item}
+          </button>
+        );
+      })}
+    </div>
+  );
+};
+
+const SearchBar = ({ searchQuery, setSearchQuery }) => {
+  return (
+    <div className="searchbar-container">
+      <input
+        placeholder="Search Items"
+        value={searchQuery}
+        onChange={(e) => {
+          setSearchQuery(e.target.value);
+        }}
+      />
+    </div>
+  );
+};

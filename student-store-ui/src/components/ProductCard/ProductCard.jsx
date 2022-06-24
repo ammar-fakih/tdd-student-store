@@ -11,7 +11,12 @@ const ProductCard = ({
   shoppingCart,
 }) => {
   return (
-    <div className="product-card">
+    <div
+      className="product-card"
+      style={{
+        height: showDescription ? '400px' : '350px',
+        width: showDescription ? '500px' : '350px',
+      }}>
       <div className="image-container">
         <Link to={`/products/${product.id}`}>
           <img className="product-image" src={product.image} />
@@ -48,11 +53,12 @@ const ProductCard = ({
               }
             </span>
           )}
-
-          {showDescription === product.id && (
-            <div className="showDescription">{product.description}</div>
-          )}
         </div>
+      </div>
+      <div className="desc">
+        {showDescription && (
+          <div className="showDescription">{product.description}</div>
+        )}
       </div>
     </div>
   );
