@@ -10,21 +10,21 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 
 #### Core Features
 
-- [ ] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
-- [ ] On initial page load, display the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store).
-- [ ] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
-- [ ] User can search for products.
-- [ ] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
-- [ ] User can click to expand the shopping cart in the left navigation.
-- [ ] User can click the '+' button on a product cart to increment that product in the shopping cart.
-- [ ] User can click the '-' button on a product cart to increment that product in the shopping cart.
-- [ ] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
+- [X] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
+- [X] On initial page load, display the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store).
+- [X] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
+- [X] User can search for products.
+- [X] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
+- [X] User can click to expand the shopping cart in the left navigation.
+- [X] User can click the '+' button on a product cart to increment that product in the shopping cart.
+- [X] User can click the '-' button on a product cart to increment that product in the shopping cart.
+- [X] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] User can check out, and can view receipt upon completion.
 
 #### Stretch Features
 
 - [ ] User can click in the top navigation bar to scroll to the relevant section.
-- [ ] User sees a "not found" display when searching for a nonexistent product.
+- [X] User sees a "not found" display when searching for a nonexistent product.
 - [ ] Create an endpoint for fetching all orders in the database, and an endpoint for serving an individual order based on its id.
 - [ ] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
 - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
@@ -285,15 +285,15 @@ The following specifications were met on the Express backend and the React front
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The Fast Feud lab was helpful because it showed me how states can dynamically change the web page. The twitter clone lab was also helpful because it introduced useEffect and axios, which were both very helpful for this lab. I used useEffect to call the API on page load so that the information is grabbed when the web page is first opened.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+I would like to have done more of the styling myself, instead of getting most of it from the example website. I would also like to add more filters, like filter by price.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I think I showed most of the features well but I forgot to show everything. For example, I forgot to show how the product page can be accessed through a direct URL. I saw that someone edited the styling of the product grid so I would like to do that.
 
 ### Open-source libraries used
 
@@ -302,3 +302,4 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Moe and Nicholas helped me out with the questions I had about the project.
