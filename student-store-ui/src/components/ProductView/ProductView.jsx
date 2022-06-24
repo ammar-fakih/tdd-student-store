@@ -8,7 +8,12 @@ const ProductView = ({
   shoppingCart,
 }) => {
   return (
-    <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}>
       <h1>Product #{product.id}</h1>
       <ProductCard
         product={product}
