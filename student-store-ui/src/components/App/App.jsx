@@ -10,7 +10,7 @@ import ProductDetail from '../ProductDetail.jsx/ProductDetail';
 import NotFound from '../NotFound/NotFound';
 import Hero from '../Hero/Hero';
 
-const MAIN_END_POINT = `https://codepath-store-api.herokuapp.com`;
+const MAIN_END_POINT = `http://localhost:3001`;
 
 export default function App() {
   const [products, setProducts] = React.useState([]);
@@ -29,7 +29,6 @@ export default function App() {
   React.useEffect(async () => {
     try {
       const response = await axios.get(`${MAIN_END_POINT}/store`);
-
       if (response.status != 200) {
         setError('API error ', response.text);
         return;
