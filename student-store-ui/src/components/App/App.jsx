@@ -10,7 +10,7 @@ import ProductDetail from '../ProductDetail.jsx/ProductDetail';
 import NotFound from '../NotFound/NotFound';
 import Hero from '../Hero/Hero';
 
-const MAIN_END_POINT = `http://localhost:3001`;
+const BASE_URL = `http://localhost:3001`;
 
 export default function App() {
   const [products, setProducts] = React.useState([]);
@@ -28,7 +28,7 @@ export default function App() {
 
   React.useEffect(async () => {
     try {
-      const response = await axios.get(`${MAIN_END_POINT}/store`);
+      const response = await axios.get(`${BASE_URL}/store`);
       if (response.status != 200) {
         setError('API error ', response.text);
         return;
@@ -92,7 +92,7 @@ export default function App() {
   const handleOnSubmitCheckoutForm = async () => {
 
     try {
-      const response = await axios.post(`https://codepath-store-api.herokuapp.com/store`, {
+      const response = await axios.post(`${BASE_URL}/store`, {
         shoppingCart: formatShoppingCart(),
         user: checkoutForm,
       });
@@ -153,7 +153,7 @@ export default function App() {
                   handleAddItemToCart={handleAddItemToCart}
                   handleRemoveItemFromCart={handleRemoveItemFromCart}
                   shoppingCart={shoppingCart}
-                  MAIN_END_POINT={MAIN_END_POINT}
+                  BASE_URL={BASE_URL}
                 />
               }
             />

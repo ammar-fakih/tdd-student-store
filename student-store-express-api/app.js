@@ -11,7 +11,7 @@ app.use(morgan('tiny'));
 app.use(cors())
 
 app.get("/", (req, res) => {
-  res.status(200).json({message: "welcome"});
+  res.status(200).json({ping: "pong"});
 })
 
 app.use('/store', store);

@@ -145,5 +145,452 @@
       "price": 999.99
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "id": 17,
+      "name": "Ammar",
+      "email": "ammar.fakih02@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 20
+        },
+        {
+          "itemId": 5,
+          "quantity": 10
+        }
+      ],
+      "createdAt": "2022-06-29T21:37:41.528Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "ammar.fakih02@gmail.com"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at ammar.fakih02@gmail.com:",
+          "20 total Coconut Water purchased at a cost of $3.25 for a total cost of $65",
+          "10 total Fruit Medley purchased at a cost of $7.5 for a total cost of $75",
+          "Before taxes, the subtotal was $140.",
+          "After taxes and fees were applied, the total comes out to $152.25."
+        ],
+        "productRows": [
+          {
+            "id": 4,
+            "name": "Coconut Water",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coconut_Drink%2C_Pangandaran.JPG/1920px-Coconut_Drink%2C_Pangandaran.JPG",
+            "source": "https://commons.wikimedia.org/wiki/Category:Coconut_water#/media/File:Coconut_Drink,_Pangandaran.JPG",
+            "description": "Somehow incredibly hydrating, while also not really being water.",
+            "price": 3.25,
+            "quantity": 20,
+            "totalPrice": 65
+          },
+          {
+            "id": 5,
+            "name": "Fruit Medley",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fruits.png/640px-Fruits.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Fruits.png",
+            "description": "More fruit than you know what to do with!",
+            "price": 7.5,
+            "quantity": 10,
+            "totalPrice": 75
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ammar",
+      "email": "ammar.fakih02@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 20
+        },
+        {
+          "itemId": 5,
+          "quantity": 10
+        }
+      ],
+      "createdAt": "2022-06-29T21:39:07.560Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "ammar.fakih02@gmail.com"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at ammar.fakih02@gmail.com:",
+          "20 total Coconut Water purchased at a cost of $3.25 for a total cost of $65",
+          "10 total Fruit Medley purchased at a cost of $7.5 for a total cost of $75",
+          "Before taxes, the subtotal was $140.",
+          "After taxes and fees were applied, the total comes out to $152.25."
+        ],
+        "productRows": [
+          {
+            "id": 4,
+            "name": "Coconut Water",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coconut_Drink%2C_Pangandaran.JPG/1920px-Coconut_Drink%2C_Pangandaran.JPG",
+            "source": "https://commons.wikimedia.org/wiki/Category:Coconut_water#/media/File:Coconut_Drink,_Pangandaran.JPG",
+            "description": "Somehow incredibly hydrating, while also not really being water.",
+            "price": 3.25,
+            "quantity": 20,
+            "totalPrice": 65
+          },
+          {
+            "id": 5,
+            "name": "Fruit Medley",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fruits.png/640px-Fruits.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Fruits.png",
+            "description": "More fruit than you know what to do with!",
+            "price": 7.5,
+            "quantity": 10,
+            "totalPrice": 75
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Ammar",
+      "email": "ammar.fakih02@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 20
+        },
+        {
+          "itemId": 5,
+          "quantity": 10
+        }
+      ],
+      "createdAt": "2022-06-29T21:39:13.571Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "ammar.fakih02@gmail.com"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at ammar.fakih02@gmail.com:",
+          "20 total Coconut Water purchased at a cost of $3.25 for a total cost of $65",
+          "10 total Fruit Medley purchased at a cost of $7.5 for a total cost of $75",
+          "Before taxes, the subtotal was $140.",
+          "After taxes and fees were applied, the total comes out to $152.25."
+        ],
+        "productRows": [
+          {
+            "id": 4,
+            "name": "Coconut Water",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coconut_Drink%2C_Pangandaran.JPG/1920px-Coconut_Drink%2C_Pangandaran.JPG",
+            "source": "https://commons.wikimedia.org/wiki/Category:Coconut_water#/media/File:Coconut_Drink,_Pangandaran.JPG",
+            "description": "Somehow incredibly hydrating, while also not really being water.",
+            "price": 3.25,
+            "quantity": 20,
+            "totalPrice": 65
+          },
+          {
+            "id": 5,
+            "name": "Fruit Medley",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fruits.png/640px-Fruits.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Fruits.png",
+            "description": "More fruit than you know what to do with!",
+            "price": 7.5,
+            "quantity": 10,
+            "totalPrice": 75
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Ammar",
+      "email": "ammar.fakih02@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 20
+        },
+        {
+          "itemId": 5,
+          "quantity": 10
+        }
+      ],
+      "createdAt": "2022-06-29T21:39:14.639Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "ammar.fakih02@gmail.com"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at ammar.fakih02@gmail.com:",
+          "20 total Coconut Water purchased at a cost of $3.25 for a total cost of $65",
+          "10 total Fruit Medley purchased at a cost of $7.5 for a total cost of $75",
+          "Before taxes, the subtotal was $140.",
+          "After taxes and fees were applied, the total comes out to $152.25."
+        ],
+        "productRows": [
+          {
+            "id": 4,
+            "name": "Coconut Water",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coconut_Drink%2C_Pangandaran.JPG/1920px-Coconut_Drink%2C_Pangandaran.JPG",
+            "source": "https://commons.wikimedia.org/wiki/Category:Coconut_water#/media/File:Coconut_Drink,_Pangandaran.JPG",
+            "description": "Somehow incredibly hydrating, while also not really being water.",
+            "price": 3.25,
+            "quantity": 20,
+            "totalPrice": 65
+          },
+          {
+            "id": 5,
+            "name": "Fruit Medley",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fruits.png/640px-Fruits.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Fruits.png",
+            "description": "More fruit than you know what to do with!",
+            "price": 7.5,
+            "quantity": 10,
+            "totalPrice": 75
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Ammar",
+      "email": "ammar.fakih02@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 20
+        },
+        {
+          "itemId": 5,
+          "quantity": 10
+        }
+      ],
+      "createdAt": "2022-06-29T21:40:26.316Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "ammar.fakih02@gmail.com"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at ammar.fakih02@gmail.com:",
+          "20 total Coconut Water purchased at a cost of $3.25 for a total cost of $65",
+          "10 total Fruit Medley purchased at a cost of $7.5 for a total cost of $75",
+          "Before taxes, the subtotal was $140.",
+          "After taxes and fees were applied, the total comes out to $152.25."
+        ],
+        "productRows": [
+          {
+            "id": 4,
+            "name": "Coconut Water",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coconut_Drink%2C_Pangandaran.JPG/1920px-Coconut_Drink%2C_Pangandaran.JPG",
+            "source": "https://commons.wikimedia.org/wiki/Category:Coconut_water#/media/File:Coconut_Drink,_Pangandaran.JPG",
+            "description": "Somehow incredibly hydrating, while also not really being water.",
+            "price": 3.25,
+            "quantity": 20,
+            "totalPrice": 65
+          },
+          {
+            "id": 5,
+            "name": "Fruit Medley",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fruits.png/640px-Fruits.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Fruits.png",
+            "description": "More fruit than you know what to do with!",
+            "price": 7.5,
+            "quantity": 10,
+            "totalPrice": 75
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Ammar",
+      "email": "ammar.fakih02@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 20
+        },
+        {
+          "itemId": 5,
+          "quantity": 10
+        }
+      ],
+      "createdAt": "2022-06-29T21:40:27.064Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "ammar.fakih02@gmail.com"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at ammar.fakih02@gmail.com:",
+          "20 total Coconut Water purchased at a cost of $3.25 for a total cost of $65",
+          "10 total Fruit Medley purchased at a cost of $7.5 for a total cost of $75",
+          "Before taxes, the subtotal was $140.",
+          "After taxes and fees were applied, the total comes out to $152.25."
+        ],
+        "productRows": [
+          {
+            "id": 4,
+            "name": "Coconut Water",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coconut_Drink%2C_Pangandaran.JPG/1920px-Coconut_Drink%2C_Pangandaran.JPG",
+            "source": "https://commons.wikimedia.org/wiki/Category:Coconut_water#/media/File:Coconut_Drink,_Pangandaran.JPG",
+            "description": "Somehow incredibly hydrating, while also not really being water.",
+            "price": 3.25,
+            "quantity": 20,
+            "totalPrice": 65
+          },
+          {
+            "id": 5,
+            "name": "Fruit Medley",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fruits.png/640px-Fruits.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Fruits.png",
+            "description": "More fruit than you know what to do with!",
+            "price": 7.5,
+            "quantity": 10,
+            "totalPrice": 75
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Ammar",
+      "email": "ammar.fakih02@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 20
+        },
+        {
+          "itemId": 5,
+          "quantity": 10
+        }
+      ],
+      "createdAt": "2022-06-29T21:40:28.125Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "ammar.fakih02@gmail.com"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at ammar.fakih02@gmail.com:",
+          "20 total Coconut Water purchased at a cost of $3.25 for a total cost of $65",
+          "10 total Fruit Medley purchased at a cost of $7.5 for a total cost of $75",
+          "Before taxes, the subtotal was $140.",
+          "After taxes and fees were applied, the total comes out to $152.25."
+        ],
+        "productRows": [
+          {
+            "id": 4,
+            "name": "Coconut Water",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coconut_Drink%2C_Pangandaran.JPG/1920px-Coconut_Drink%2C_Pangandaran.JPG",
+            "source": "https://commons.wikimedia.org/wiki/Category:Coconut_water#/media/File:Coconut_Drink,_Pangandaran.JPG",
+            "description": "Somehow incredibly hydrating, while also not really being water.",
+            "price": 3.25,
+            "quantity": 20,
+            "totalPrice": 65
+          },
+          {
+            "id": 5,
+            "name": "Fruit Medley",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fruits.png/640px-Fruits.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Fruits.png",
+            "description": "More fruit than you know what to do with!",
+            "price": 7.5,
+            "quantity": 10,
+            "totalPrice": 75
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "ammar",
+      "email": "email",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 6
+        }
+      ],
+      "createdAt": "2022-06-29T21:47:31.425Z",
+      "receipt": {
+        "userInfo": {
+          "name": "ammar",
+          "email": "email"
+        },
+        "lines": [
+          "Showing receipt for ammar available at email:",
+          "6 total Rice Krispies purchased at a cost of $0.99 for a total cost of $5.9399999999999995",
+          "Before taxes, the subtotal was $5.9399999999999995.",
+          "After taxes and fees were applied, the total comes out to $6.459749999999999."
+        ],
+        "productRows": [
+          {
+            "id": 1,
+            "name": "Rice Krispies",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+            "price": 0.99,
+            "quantity": 6,
+            "totalPrice": 5.9399999999999995
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "email",
+      "email": "ammar",
+      "order": [],
+      "createdAt": "2022-06-29T21:47:47.552Z",
+      "receipt": {
+        "userInfo": {
+          "name": "email",
+          "email": "ammar"
+        },
+        "lines": [
+          "Showing receipt for email available at ammar:",
+          "Before taxes, the subtotal was $0.",
+          "After taxes and fees were applied, the total comes out to $0."
+        ],
+        "productRows": []
+      }
+    },
+    {
+      "id": 10,
+      "name": "ammar",
+      "email": "email",
+      "order": [],
+      "createdAt": "2022-06-29T21:48:07.451Z",
+      "receipt": {
+        "userInfo": {
+          "name": "ammar",
+          "email": "email"
+        },
+        "lines": [
+          "Showing receipt for ammar available at email:",
+          "Before taxes, the subtotal was $0.",
+          "After taxes and fees were applied, the total comes out to $0."
+        ],
+        "productRows": []
+      }
+    }
+  ]
 }

@@ -9,7 +9,7 @@ const ProductDetail = ({
   handleAddItemToCart,
   handleRemoveItemFromCart,
   shoppingCart,
-  MAIN_END_POINT,
+  BASE_URL,
 }) => {
   const [currentProduct, setCurrentProduct] = React.useState({});
   const [error, setError] = React.useState(false);
@@ -17,7 +17,7 @@ const ProductDetail = ({
 
   useEffect(async () => {
     try {
-      const curr = await axios.get(`${MAIN_END_POINT}/store/${productId}`);
+      const curr = await axios.get(`${BASE_URL}/store/${productId}`);
 
       setCurrentProduct(curr.data.product);
       setError(false);
