@@ -80,9 +80,33 @@ export default function App() {
     setCheckoutForm({ name, email });
   };
 
-  const handleOnSubmitCheckoutForm = () => {
-    setCheckoutForm({ name: '', email: '' });
-    // TODO: complete this
+  const formatShoppingCart = () => {
+    return shoppingCart.map((item) => {
+      return {
+        itemId: item.productId,
+        quantity: item.quantity,
+      }
+    })
+  }
+
+  const handleOnSubmitCheckoutForm = async () => {
+
+    try {
+      const response = await axios.post(`https://codepath-store-api.herokuapp.com/store`, {
+        shoppingCart: formatShoppingCart(),
+        user: checkoutForm,
+      });
+      if (response.status !== 201) {
+        setError('API error ', response.text);
+        return;
+      }
+      console.log(response.data.purchase.receipt)
+      setShoppingCart([]);
+      setShoppingCartPrice(0);
+      setCheckoutForm({ name: '', email: '' });
+    } catch(e) {
+      console.log('API post error', e);
+    }
   };
 
   return (

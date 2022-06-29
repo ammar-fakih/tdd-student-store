@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './Home.css';
 import ProductGrid from '../ProductGrid/ProductGrid';
-import CodepathLogo from '../../../../codepath.f1b3e41a.svg';
+import CodepathLogo from '../../../codepath.f1b3e41a.svg';
 import HappyPersonPic from '../../../happy_person.517b658d.svg';
 
 export default function Home({
@@ -12,7 +12,6 @@ export default function Home({
   filter,
   searchQuery,
 }) {
-  console.log(products);
 
   return (
     <div className="home">
