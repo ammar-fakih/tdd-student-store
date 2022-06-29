@@ -21,6 +21,7 @@ class Storage {
   get(key) {
     return this.db.get(key)
   }
+
 }
 
 module.exports = {

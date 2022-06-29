@@ -1,13 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const { storage } = require('../data/storage');
+const Store = require('../models/Store.js');
 
-router.get("/", (req, res) => {
-  res.status(200).json({products: storage.get("products")});
+router.get("/", async (req, res) => {
+  const products = Store.getProducts();
+  res.status(200).json({ products });
 })
 
 router.get("/:productId", (req, res) => {
-  res.status(200).json({products: storage.get("products")});
+  const productId = req.params.productId;
+  const product = Store.getProductById(productId);
+  console.log(product);
+  res.status(200).json({ product });
 })
 
 module.exports = router;
