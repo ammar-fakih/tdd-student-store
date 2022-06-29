@@ -591,6 +591,43 @@
         ],
         "productRows": []
       }
+    },
+    {
+      "id": 11,
+      "name": "Ammar",
+      "email": "Ammar",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 4
+        }
+      ],
+      "createdAt": "2022-06-29T22:39:10.871Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "Ammar"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at Ammar:",
+          "4 total Rice Krispies purchased at a cost of $0.99 for a total cost of $3.96",
+          "Before taxes, the subtotal was $3.96.",
+          "After taxes and fees were applied, the total comes out to $4.3065."
+        ],
+        "productRows": [
+          {
+            "id": 1,
+            "name": "Rice Krispies",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+            "price": 0.99,
+            "quantity": 4,
+            "totalPrice": 3.96
+          }
+        ]
+      }
     }
   ]
 }

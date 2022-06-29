@@ -1,4 +1,5 @@
 const {storage} = require('../data/storage');
+const {BadRequestError} = require('../utils/errors');
 
 class Storage {
 
@@ -7,15 +8,35 @@ class Storage {
   }
 
   static getProductById(id) {
-    return storage.get("products").find({id: Number(id)}).value()
+
+    const productInfo = storage.get("products").find({id: Number(id)}).value()
+    if (!productInfo) {
+      throw new BadRequestError(`Product with id ${id} not found`);
+    }
+    return productInfo;
   }
 
   static createReceipt(checkoutForm) {
     let lines = [`Showing receipt for ${checkoutForm.user.name} available at ${checkoutForm.user.email}:`];
     let totalPrice = 0;
-    const productRows = checkoutForm.shoppingCart.map(item => {
-      const productInfo = this.getProductById(item.itemId);
 
+    let addedIds = new Set();
+    const productRows = checkoutForm.shoppingCart.map(item => {
+      if (!item.itemId) {
+        throw new BadRequestError('Missing productId');
+      }
+
+      if (!item.quantity) {
+        throw new BadRequestError('Missing quantity');
+      }
+      // Check for duplicates in the shopping cart
+      if (addedIds.has(item.itemId)) {
+        throw new BadRequestError("Duplicate product in cart");
+      } else {
+        addedIds.add(item.itemId);
+      }
+
+      const productInfo = this.getProductById(item.itemId);
       const itemTotalCost = productInfo.price * item.quantity;
       totalPrice += itemTotalCost;
       lines.push(`${item.quantity} total ${productInfo.name} purchased at a cost of $${productInfo.price} for a total cost of $${itemTotalCost}`);
@@ -29,23 +50,34 @@ class Storage {
   }
 
   static checkOut(checkoutForm) {
-    let currentPurchases = storage.get('purchases');
-    const id = currentPurchases.size() + 1;
-    console.log(id)
-    const {receipt, total} = this.createReceipt(checkoutForm);
-    const createdAt = new Date().toISOString()
+    try {
+      if (!checkoutForm.user || !checkoutForm.user.name || !checkoutForm.user.email) {
+        throw new BadRequestError('Missing user information');
+      }
+      if (!checkoutForm.shoppingCart || checkoutForm.shoppingCart.length === 0) {
+        throw new BadRequestError('Missing shopping cart');
+      }
+      let currentPurchases = storage.get('purchases');
+      const id = currentPurchases.size() + 1;
+      console.log(id)
+      const {receipt, total} = this.createReceipt(checkoutForm);
+      const createdAt = new Date().toISOString()
 
-    const purchase = {
-      id,
-      name: checkoutForm.user.name,
-      email: checkoutForm.user.email,
-      order: checkoutForm.shoppingCart,
-      total,
-      createdAt,
-      receipt,
+      const purchase = {
+        id,
+        name: checkoutForm.user.name,
+        email: checkoutForm.user.email,
+        order: checkoutForm.shoppingCart,
+        total,
+        createdAt,
+        receipt,
+      }
+      currentPurchases.push(purchase).write()
+      return purchase;
+    } catch(e) {
+      throw new BadRequestError(e.message);
     }
-    currentPurchases.push(purchase).write()
-    return purchase;
+    
   }
 }
 
