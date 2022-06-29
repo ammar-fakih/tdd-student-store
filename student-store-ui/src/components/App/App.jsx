@@ -25,6 +25,7 @@ export default function App() {
   });
   const [filter, setFilter] = React.useState('All Categories');
   const [searchQuery, setSearchQuery] = React.useState('');
+  const [receipt, setReceipt] = React.useState(null);
 
   React.useEffect(async () => {
     try {
@@ -100,7 +101,7 @@ export default function App() {
         setError('API error ', response.text);
         return;
       }
-      console.log(response.data.purchase.receipt)
+      setReceipt(response.data.purchase.receipt);
       setShoppingCart([]);
       setShoppingCartPrice(0);
       setCheckoutForm({ name: '', email: '' });
@@ -129,6 +130,7 @@ export default function App() {
             checkoutForm={checkoutForm}
             handleOnCheckoutFormChange={handleOnCheckoutFormChange}
             handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+            receipt={receipt}
           />
           <Routes>
             <Route

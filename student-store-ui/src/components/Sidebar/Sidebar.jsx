@@ -11,6 +11,7 @@ export default function Sidebar({
   checkoutForm,
   handleOnCheckoutFormChange,
   handleOnSubmitCheckoutForm,
+  receipt
 }) {
   return (
     <section className="sidebar">
@@ -18,12 +19,16 @@ export default function Sidebar({
         <div className="closebtn" onClick={handleOnToggle}>
           &times;
         </div>
-        <ShoppingCart shoppingCart={shoppingCart} />
+        {!(Array.isArray(shoppingCart) && shoppingCart.length === 0 && receipt) && <ShoppingCart shoppingCart={shoppingCart} />}
+        {Array.isArray(shoppingCart) && shoppingCart.length > 0 && (
         <CheckoutForm
           checkoutForm={checkoutForm}
           handleOnCheckoutFormChange={handleOnCheckoutFormChange}
           handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
-        />
+        />)}
+
+        {Array.isArray(shoppingCart) && shoppingCart.length === 0 && receipt && (<Receipt receipt={receipt}/>)}
+        
       </div>
 
       <div className="sidebar-closed">
@@ -39,5 +44,35 @@ export default function Sidebar({
         style={{ display: isOpen ? 'block' : 'none' }}
         onClick={handleOnToggle}></div>
     </section>
+  );
+}
+
+const Receipt = ({receipt}) => {
+  return (
+    <div className="receipt">
+      <h1>Receipt</h1>
+      <h3>Name: {receipt.userInfo.name}</h3>
+      <h3>Email: {receipt.userInfo.email}</h3>
+      {receipt.lines.map((line, i) => {
+        return <div key={i}>{line} </div>; })}
+        {'\n'}
+      <h3>Purchases</h3>
+      <table>
+        <tr>
+          <th>Quantity</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+        {receipt.productRows.map((item, i) => {
+        return (
+        <tr>
+          <td>{item.quantity}</td>
+          <td>{item.name}</td>
+          <td>${item.totalPrice}</td>
+        </tr>);
+      })}
+      </table>
+      <h3>Total: </h3>
+    </div>
   );
 }

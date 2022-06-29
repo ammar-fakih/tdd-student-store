@@ -628,6 +628,207 @@
           }
         ]
       }
+    },
+    {
+      "id": 12,
+      "name": "Ammar",
+      "email": "afakih",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 5
+        }
+      ],
+      "createdAt": "2022-06-29T22:46:19.620Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "afakih"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at afakih:",
+          "5 total Rice Krispies purchased at a cost of $0.99 for a total cost of $4.95",
+          "Before taxes, the subtotal was $4.95.",
+          "After taxes and fees were applied, the total comes out to $5.383125."
+        ],
+        "productRows": [
+          {
+            "id": 1,
+            "name": "Rice Krispies",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+            "price": 0.99,
+            "quantity": 5,
+            "totalPrice": 4.95
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name": "fdafasf",
+      "email": "faf",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 3
+        },
+        {
+          "itemId": 2,
+          "quantity": 3
+        }
+      ],
+      "createdAt": "2022-06-29T22:59:47.151Z",
+      "receipt": {
+        "userInfo": {
+          "name": "fdafasf",
+          "email": "faf"
+        },
+        "lines": [
+          "Showing receipt for fdafasf available at faf:",
+          "3 total Rice Krispies purchased at a cost of $0.99 for a total cost of $2.9699999999999998",
+          "3 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $4.5",
+          "Before taxes, the subtotal was $7.47.",
+          "After taxes and fees were applied, the total comes out to $8.123624999999999."
+        ],
+        "productRows": [
+          {
+            "id": 1,
+            "name": "Rice Krispies",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+            "price": 0.99,
+            "quantity": 3,
+            "totalPrice": 2.9699999999999998
+          },
+          {
+            "id": 2,
+            "name": "Flamin Hot Cheetos",
+            "category": "food",
+            "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
+            "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
+            "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
+            "price": 1.5,
+            "quantity": 3,
+            "totalPrice": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "name": "fdafsfa",
+      "email": "fdsafs",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 5
+        }
+      ],
+      "createdAt": "2022-06-29T23:01:21.129Z",
+      "receipt": {
+        "userInfo": {
+          "name": "fdafsfa",
+          "email": "fdsafs"
+        },
+        "lines": [
+          "Showing receipt for fdafsfa available at fdsafs:",
+          "5 total Rice Krispies purchased at a cost of $0.99 for a total cost of $4.95",
+          "Before taxes, the subtotal was $4.95.",
+          "After taxes and fees were applied, the total comes out to $5.383125."
+        ],
+        "productRows": [
+          {
+            "id": 1,
+            "name": "Rice Krispies",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+            "price": 0.99,
+            "quantity": 5,
+            "totalPrice": 4.95
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "name": "fdafsf",
+      "email": "fafas",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 5
+        }
+      ],
+      "createdAt": "2022-06-29T23:02:15.301Z",
+      "receipt": {
+        "userInfo": {
+          "name": "fdafsf",
+          "email": "fafas"
+        },
+        "lines": [
+          "Showing receipt for fdafsf available at fafas:",
+          "5 total Rice Krispies purchased at a cost of $0.99 for a total cost of $4.95",
+          "Before taxes, the subtotal was $4.95.",
+          "After taxes and fees were applied, the total comes out to $5.383125."
+        ],
+        "productRows": [
+          {
+            "id": 1,
+            "name": "Rice Krispies",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+            "price": 0.99,
+            "quantity": 5,
+            "totalPrice": 4.95
+          }
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "name": "Ammar",
+      "email": "afakih@hmc.edu",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 5
+        }
+      ],
+      "createdAt": "2022-06-29T23:09:43.049Z",
+      "receipt": {
+        "userInfo": {
+          "name": "Ammar",
+          "email": "afakih@hmc.edu"
+        },
+        "lines": [
+          "Showing receipt for Ammar available at afakih@hmc.edu:",
+          "5 total Rice Krispies purchased at a cost of $0.99 for a total cost of $4.95",
+          "Before taxes, the subtotal was $4.95.",
+          "After taxes and fees were applied, the total comes out to $5.383125."
+        ],
+        "productRows": [
+          {
+            "id": 1,
+            "name": "Rice Krispies",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+            "price": 0.99,
+            "quantity": 5,
+            "totalPrice": 4.95
+          }
+        ]
+      }
     }
   ]
 }
