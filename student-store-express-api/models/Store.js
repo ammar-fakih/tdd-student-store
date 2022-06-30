@@ -29,6 +29,10 @@ class Storage {
     return purchaseInfo;
   }
 
+  static round = (num) => {
+    return Number(Math.round(num + 'e2') + 'e-2');
+  };
+
   static createReceipt(checkoutForm) {
     let lines = [`Showing receipt for ${checkoutForm.user.name} available at ${checkoutForm.user.email}:`];
     let totalPrice = 0;
@@ -50,14 +54,16 @@ class Storage {
       }
 
       const productInfo = this.getProductById(item.itemId);
-      const itemTotalCost = productInfo.price * item.quantity;
+      const itemTotalCost = this.round(productInfo.price * item.quantity);
       totalPrice += itemTotalCost;
       lines.push(`${item.quantity} total ${productInfo.name} purchased at a cost of $${productInfo.price} for a total cost of $${itemTotalCost}`);
       return { ...productInfo, quantity: item.quantity, totalPrice: itemTotalCost};
     })
 
+    totalPrice = this.round(totalPrice);
+
     lines.push(`Before taxes, the subtotal was $${totalPrice}.`);
-    lines.push(`After taxes and fees were applied, the total comes out to $${totalPrice * 1.0875}.`);
+    lines.push(`After taxes and fees were applied, the total comes out to $${this.round(totalPrice * 1.0875)}.`);
 
     return {receipt: { userInfo: { name: checkoutForm.user.name, email: checkoutForm.user.email }, lines, productRows }, totalPrice};
   }

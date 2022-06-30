@@ -15,3 +15,11 @@
   margin: 0 300px 0 100px;
 }
 
+#buy-now {
+  background-color: #1e2a30;
+  padding: 15px;
+}
+
+.navbar-contents > div:hover {
+  cursor: pointer;
+}

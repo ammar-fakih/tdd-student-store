@@ -6,10 +6,11 @@ import Navbar from '../Navbar/Navbar';
 import Sidebar from '../Sidebar/Sidebar';
 import Home from '../Home/Home';
 import './App.css';
-import ProductDetail from '../ProductDetail.jsx/ProductDetail';
+import ProductDetail from '../ProductDetail/ProductDetail';
 import NotFound from '../NotFound/NotFound';
 import Hero from '../Hero/Hero';
 import Purchases from '../Purchases/Purchases';
+import PurchaseDetails from '../PurchaseDetail/PurchaseDetail';
 
 const BASE_URL = `http://localhost:3001`;
 
@@ -118,7 +119,7 @@ export default function App() {
     <div className="app">
       <main>
         <BrowserRouter>
-          <Navbar />
+          <Navbar handleOnToggle={handleOnToggle}/>
           <Hero />
           
          
@@ -151,9 +152,8 @@ export default function App() {
                 />
               }
             />
-            <Route path="/purchases" element={<Purchases BASE_URL={BASE_URL}/>}>
-
-            </Route>
+            <Route path="/purchases" element={<Purchases BASE_URL={BASE_URL}/>} />
+            <Route path="/purchases/:purchaseId" element={<PurchaseDetails BASE_URL={BASE_URL}/>} />
             <Route
               path="/products/:productId"
               element={
