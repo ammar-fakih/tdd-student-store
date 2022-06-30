@@ -72,7 +72,6 @@ const Receipt = ({receipt}) => {
         </tr>);
       })}
       </table>
-      <h3>Total: </h3>
     </div>
   );
 }

@@ -8,6 +8,17 @@ router.get("/", async (req, res) => {
   res.status(200).json({ products });
 })
 
+router.get("/purchases", (req, res) => {
+  const purchases = Store.getPurchases();
+  res.status(200).json({ purchases });
+});
+
+router.get("/purchases/:purchaseId", (req, res) => {
+  const purchaseId = req.params.purchaseId;
+  const purchase = Store.getPurchaseById(purchaseId);
+  res.status(200).json({ purchase });
+})
+
 router.get("/:productId", (req, res) => {
   const productId = req.params.productId;
   const product = Store.getProductById(productId);

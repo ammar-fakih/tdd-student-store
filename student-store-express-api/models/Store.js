@@ -7,6 +7,10 @@ class Storage {
     return storage.get('products');
   }
 
+  static getPurchases() {
+    return storage.get('purchases');
+  }
+
   static getProductById(id) {
 
     const productInfo = storage.get("products").find({id: Number(id)}).value()
@@ -14,6 +18,15 @@ class Storage {
       throw new BadRequestError(`Product with id ${id} not found`);
     }
     return productInfo;
+  }
+
+  static getPurchaseById(id) {
+
+    const purchaseInfo = storage.get("purchases").find({id: Number(id)}).value()
+    if (!purchaseInfo) {
+      throw new BadRequestError(`Purchase with id ${id} not found`);
+    }
+    return purchaseInfo;
   }
 
   static createReceipt(checkoutForm) {

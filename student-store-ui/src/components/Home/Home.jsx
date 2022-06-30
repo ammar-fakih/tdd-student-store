@@ -10,11 +10,15 @@ export default function Home({
   handleRemoveItemFromCart,
   shoppingCart,
   filter,
+  isFetching,
   searchQuery,
+  error
 }) {
 
   return (
     <div className="home">
+      {error && <h2 style={{textAlign: "center"}}>{error}</h2>}
+      {isFetching && !error ? (<h2 style={{textAlign: "center"}}>Loading Products</h2>) : 
       <ProductGrid
         searchQuery={searchQuery}
         filter={filter}
@@ -22,7 +26,8 @@ export default function Home({
         handleRemoveItemFromCart={handleRemoveItemFromCart}
         products={products}
         shoppingCart={shoppingCart}
-      />
+      />}
+     
       <div className="about" id="About">
         <div className="content">
           <h3>About</h3>

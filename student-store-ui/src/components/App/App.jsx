@@ -28,6 +28,7 @@ export default function App() {
   const [receipt, setReceipt] = React.useState(null);
 
   React.useEffect(async () => {
+    setIsFetching(true);
     try {
       const response = await axios.get(`${BASE_URL}/store`);
       if (response.status != 200) {
@@ -43,7 +44,9 @@ export default function App() {
       setProducts(response.data.products);
     } catch (e) {
       console.log('API call error', e);
+      setError('API call error');
     }
+    setIsFetching(false);
   }, []);
 
   const handleOnToggle = () => {
@@ -145,6 +148,8 @@ export default function App() {
                   handleAddItemToCart={handleAddItemToCart}
                   handleRemoveItemFromCart={handleRemoveItemFromCart}
                   shoppingCart={shoppingCart}
+                  isFetching={isFetching}
+                  error={error}
                 />
               }
             />
