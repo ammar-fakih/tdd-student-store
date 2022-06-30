@@ -1,4 +1,6 @@
 import * as React from 'react';
+
+import SearchBar from '../../../SearchBar/SearchBar';
 import './Home.css';
 import ProductGrid from '../ProductGrid/ProductGrid';
 import CodepathLogo from '../../../codepath.f1b3e41a.svg';
@@ -9,14 +11,21 @@ export default function Home({
   handleAddItemToCart,
   handleRemoveItemFromCart,
   shoppingCart,
+  setFilter,
   filter,
   isFetching,
   searchQuery,
+  setSearchQuery,
   error
 }) {
 
   return (
     <div className="home">
+      <SubNavbar setFilter={setFilter} filter={filter} />
+      <SearchBar
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
       {error && <h2 style={{textAlign: "center"}}>{error}</h2>}
       {isFetching && !error ? (<h2 style={{textAlign: "center"}}>Loading Products</h2>) : 
       <ProductGrid
@@ -174,3 +183,24 @@ export default function Home({
     </div>
   );
 }
+
+const SubNavbar = ({ filter, setFilter }) => {
+  const categories = ['All Categories', 'Food', 'Accessories', 'Tech'];
+  return (
+    <div className={`sub-navbar`}>
+      {categories.map((item, i) => {
+        return (
+          <button
+            key={i}
+            id={`${filter === item ? 'selected-filter' : ''}`}
+            onClick={() => {
+              setFilter(item);
+            }}>
+            {item}
+          </button>
+        );
+      })}
+    </div>
+  );
+};
+

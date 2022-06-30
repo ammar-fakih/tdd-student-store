@@ -9,6 +9,7 @@ import './App.css';
 import ProductDetail from '../ProductDetail.jsx/ProductDetail';
 import NotFound from '../NotFound/NotFound';
 import Hero from '../Hero/Hero';
+import Purchases from '../Purchases/Purchases';
 
 const BASE_URL = `http://localhost:3001`;
 
@@ -119,11 +120,8 @@ export default function App() {
         <BrowserRouter>
           <Navbar />
           <Hero />
-          <SubNavbar setFilter={setFilter} filter={filter} />
-          <SearchBar
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-          />
+          
+         
 
           <Sidebar
             handleOnToggle={handleOnToggle}
@@ -153,6 +151,9 @@ export default function App() {
                 />
               }
             />
+            <Route path="/purchases" element={<Purchases BASE_URL={BASE_URL}/>}>
+
+            </Route>
             <Route
               path="/products/:productId"
               element={
@@ -172,36 +173,5 @@ export default function App() {
   );
 }
 
-const SubNavbar = ({ filter, setFilter }) => {
-  const categories = ['All Categories', 'Food', 'Accessories', 'Tech'];
-  return (
-    <div className={`sub-navbar`}>
-      {categories.map((item, i) => {
-        return (
-          <button
-            key={i}
-            id={`${filter === item ? 'selected-filter' : ''}`}
-            onClick={() => {
-              setFilter(item);
-            }}>
-            {item}
-          </button>
-        );
-      })}
-    </div>
-  );
-};
 
-const SearchBar = ({ searchQuery, setSearchQuery }) => {
-  return (
-    <div className="searchbar-container">
-      <input
-        placeholder="Search Items"
-        value={searchQuery}
-        onChange={(e) => {
-          setSearchQuery(e.target.value);
-        }}
-      />
-    </div>
-  );
-};
+

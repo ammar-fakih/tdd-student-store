@@ -1,0 +1,18 @@
+.searchbar-container {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar-container > input {
+  width: 80%;
+  height: 4rem;
+  font-size: 2.5rem;
+}
+
+.searchbar-container > button {
+  height: 4rem;
+  width: 100px;
+}

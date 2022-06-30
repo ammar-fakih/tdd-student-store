@@ -12,6 +12,7 @@ export default function Navbar() {
         <div>About Us</div>
         <div>Contact Us</div>
         <div>Buy Now</div>
+        <div><NavLink style={{textDecoration: "none", color: "white"}} to="/purchases">Orders</NavLink></div>
       </div>
     </nav>
   );
