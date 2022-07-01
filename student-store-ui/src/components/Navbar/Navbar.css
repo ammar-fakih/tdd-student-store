@@ -4,7 +4,7 @@
   top: 0;
   height: 70px;
   padding: 0;
-  background-color: #2c3f47;
+  background-color: #6B2D5C;
   color: #fff;
 }
 
@@ -17,9 +17,20 @@
 
 #buy-now {
   background-color: #1e2a30;
+  border-radius: 10%;
   padding: 15px;
 }
 
 .navbar-contents > div:hover {
   cursor: pointer;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 2px;
+}
+
+.active-link {
+  border-bottom: 1px solid white;
 }

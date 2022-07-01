@@ -18,6 +18,11 @@ router.get('/purchases', (req, res) => {
   }
 });
 
+router.delete('/purchases/:id', async (req, res) => {
+  const purchase = Store.deletePurchase(req.params.id);
+  res.status(200).json({ purchase });
+});
+
 router.get('/purchases/:purchaseId', (req, res) => {
   const purchaseId = req.params.purchaseId;
   const purchase = Store.getPurchaseById(purchaseId);

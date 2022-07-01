@@ -12,7 +12,7 @@ export default function Purchases({ BASE_URL }) {
   React.useEffect(async () => {
     getPurchases();
   }, []);
-  
+
   const getPurchases = async () => {
     try {
       const response = await axios.get(`${BASE_URL}/store/purchases`);
@@ -45,6 +45,15 @@ export default function Purchases({ BASE_URL }) {
     }
   };
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`${BASE_URL}/store/purchases/${id}`);
+      getPurchases();
+    } catch (e) {
+      console.log('Error deleting purchase', e);
+    }
+  };
+
   return (
     <div>
       {products.length > 0 && (
@@ -63,7 +72,13 @@ export default function Purchases({ BASE_URL }) {
             <h3>Orders</h3>
           )}
           {products.reverse().map((item) => {
-            return <PurchaseCard product={item} key={item.id} />;
+            return (
+              <PurchaseCard
+                product={item}
+                key={item.id}
+                handleDelete={handleDelete}
+              />
+            );
           })}
         </div>
       ) : (
@@ -73,7 +88,7 @@ export default function Purchases({ BASE_URL }) {
   );
 }
 
-const PurchaseCard = ({ product }) => {
+const PurchaseCard = ({ product, handleDelete }) => {
   return (
     <div className="purchase-card">
       <Link
@@ -92,6 +107,13 @@ const PurchaseCard = ({ product }) => {
           <p>{product.createdAt}</p>
         </div>
       </Link>
+      <button
+        onClick={() => {
+          handleDelete(product.id);
+        }}
+        style={{}}>
+        Delete
+      </button>
     </div>
   );
 };

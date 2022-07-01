@@ -6,6 +6,12 @@ class Storage {
     return storage.get('products');
   }
 
+  static deletePurchase(id) {
+    const purchase = this.getPurchaseById(id);
+    storage.get('purchases').remove({ id: Number(id) }).write();
+    return purchase;
+  }
+
   static getPurchases() {
     return storage.get('purchases');
   }

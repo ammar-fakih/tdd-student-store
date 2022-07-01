@@ -4,7 +4,7 @@
   height: 400px;
 }
 .hero .content {
-  background: var(--bright-green);
+  background: #F0386B;
   max-width: var(--content-width);
   width: 100%;
   margin: 0 auto;
