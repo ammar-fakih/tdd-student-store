@@ -1,7 +1,32 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+const nodemailer = require('nodemailer');
+require('dotenv').config();
 const Store = require('../models/store.js');
 const { BadRequestError } = require('../utils/errors.js');
+
+const transport = {
+  //this is the authentication for sending email.
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // use TLS
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.SMTP_TO_PASSWORD,
+  },
+};
+
+const transporter = nodemailer.createTransport(transport);
+transporter.verify((error, success) => {
+  if (error) {
+    //if error happened code ends here
+    console.error(error);
+  } else {
+    //this means success
+    console.log('Ready to send mail!');
+  }
+});
 
 router.get('/', async (req, res) => {
   const products = Store.getProducts();

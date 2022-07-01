@@ -147,59 +147,6 @@
   ],
   "purchases": [
     {
-      "id": 1,
-      "name": "Ammar Fakih",
-      "email": "afakih@gmail.com",
-      "order": [
-        {
-          "itemId": 2,
-          "quantity": 3
-        },
-        {
-          "itemId": 6,
-          "quantity": 4
-        }
-      ],
-      "createdAt": "2022-07-01T19:25:47.150Z",
-      "receipt": {
-        "userInfo": {
-          "name": "Ammar Fakih",
-          "email": "afakih@gmail.com"
-        },
-        "lines": [
-          "Showing receipt for Ammar Fakih available at afakih@gmail.com:",
-          "3 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $4.5",
-          "4 total Bar Code Shirts purchased at a cost of $19.99 for a total cost of $79.96",
-          "Before taxes, the subtotal was $84.46.",
-          "After taxes and fees were applied, the total comes out to $91.85."
-        ],
-        "productRows": [
-          {
-            "id": 2,
-            "name": "Flamin Hot Cheetos",
-            "category": "food",
-            "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
-            "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
-            "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
-            "price": 1.5,
-            "quantity": 3,
-            "totalPrice": 4.5
-          },
-          {
-            "id": 6,
-            "name": "Bar Code Shirts",
-            "category": "clothing",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Barcode_wikipedia_shirt.svg/640px-Barcode_wikipedia_shirt.svg.png",
-            "source": "https://commons.wikimedia.org/wiki/File:Barcode_wikipedia_shirt.svg",
-            "description": "So you can scan yourself in the checkout aisle.",
-            "price": 19.99,
-            "quantity": 4,
-            "totalPrice": 79.96
-          }
-        ]
-      }
-    },
-    {
       "id": 2,
       "name": "John Doe",
       "email": "jDoe@gmail.com",
@@ -254,53 +201,69 @@
     },
     {
       "id": 3,
-      "name": "Bilbo Backshots",
-      "email": "bilbo@yahoo.com",
+      "name": "Ammar Fakih",
+      "email": "afakih@hmc.edu",
       "order": [
         {
-          "itemId": 14,
-          "quantity": 4
+          "itemId": 1,
+          "quantity": 2
         },
         {
-          "itemId": 8,
-          "quantity": 4
+          "itemId": 2,
+          "quantity": 2
+        },
+        {
+          "itemId": 3,
+          "quantity": 2
         }
       ],
-      "createdAt": "2022-07-01T19:26:26.650Z",
+      "createdAt": "2022-07-01T20:52:17.986Z",
       "receipt": {
         "userInfo": {
-          "name": "Bilbo Backshots",
-          "email": "bilbo@yahoo.com"
+          "name": "Ammar Fakih",
+          "email": "afakih@hmc.edu"
         },
         "lines": [
-          "Showing receipt for Bilbo Backshots available at bilbo@yahoo.com:",
-          "4 total Keyboard purchased at a cost of $110 for a total cost of $440",
-          "4 total Knitted Beanie purchased at a cost of $19.99 for a total cost of $79.96",
-          "Before taxes, the subtotal was $519.96.",
-          "After taxes and fees were applied, the total comes out to $565.46."
+          "Showing receipt for Ammar Fakih available at afakih@hmc.edu:",
+          "2 total Rice Krispies purchased at a cost of $0.99 for a total cost of $1.98",
+          "2 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $3",
+          "2 total Cinnamon Rolls purchased at a cost of $2.99 for a total cost of $5.98",
+          "Before taxes, the subtotal was $10.96.",
+          "After taxes and fees were applied, the total comes out to $11.92."
         ],
         "productRows": [
           {
-            "id": 14,
-            "name": "Keyboard",
-            "category": "tech",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Apple-wireless-keyboard.jpg/800px-Apple-wireless-keyboard.jpg",
-            "source": "https://commons.wikimedia.org/wiki/File:Apple-wireless-keyboard.jpg",
-            "description": "A wireless keyboard for your computer! Because who doesn't like walking around while they type up an essay.",
-            "price": 110,
-            "quantity": 4,
-            "totalPrice": 440
+            "id": 1,
+            "name": "Rice Krispies",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+            "price": 0.99,
+            "quantity": 2,
+            "totalPrice": 1.98
           },
           {
-            "id": 8,
-            "name": "Knitted Beanie",
-            "category": "clothing",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Blue_knit-cap_beanie_by_RobertLender.jpeg/640px-Blue_knit-cap_beanie_by_RobertLender.jpeg",
-            "source": "https://commons.wikimedia.org/wiki/File:Blue_knit-cap_beanie_by_RobertLender.jpeg",
-            "description": "Keeps your head absurdly warm while the rest of your body freezes.",
-            "price": 19.99,
-            "quantity": 4,
-            "totalPrice": 79.96
+            "id": 2,
+            "name": "Flamin Hot Cheetos",
+            "category": "food",
+            "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
+            "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
+            "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
+            "price": 1.5,
+            "quantity": 2,
+            "totalPrice": 3
+          },
+          {
+            "id": 3,
+            "name": "Cinnamon Rolls",
+            "category": "food",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Johns_Inc_Cinnamon_Rolls.jpg",
+            "source": "https://en.wikipedia.org/wiki/File:Johns_Inc_Cinnamon_Rolls.jpg",
+            "description": "Basically just cake for breakfast, but who's complaining?",
+            "price": 2.99,
+            "quantity": 2,
+            "totalPrice": 5.98
           }
         ]
       }
