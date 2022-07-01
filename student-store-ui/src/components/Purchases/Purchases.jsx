@@ -7,11 +7,13 @@ import './Purchases.css';
 export default function Purchases({ BASE_URL }) {
   const [searchQuery, setSearchQuery] = React.useState('');
   const [products, setProducts] = React.useState([]);
-  const [isFetching, setIsFetching] = React.useState(false);
   const [error, setError] = React.useState('');
 
   React.useEffect(async () => {
-    setIsFetching(true);
+    getPurchases();
+  }, []);
+  
+  const getPurchases = async () => {
     try {
       const response = await axios.get(`${BASE_URL}/store/purchases`);
       console.log(response.data);
@@ -20,15 +22,26 @@ export default function Purchases({ BASE_URL }) {
       console.log('API call error', e);
       setError('API call error');
     }
-    setIsFetching(false);
-  }, []);
+  };
 
   const handleSearch = async () => {
+    if (!searchQuery) {
+      return;
+    }
     try {
-      const response = await axios.get(`MAIN_URL/purchases/${searchQuery}`);
+      const response = await axios.get(
+        `${BASE_URL}/store/purchases/?email=${searchQuery}`
+      );
+      setProducts([response.data.purchase]);
     } catch (e) {
-      console.log('API call error', e);
-      setError('API call error');
+      console.log('Item not found', e);
+      setError('Item not found');
+    }
+  };
+
+  const handleOnChange = (e) => {
+    if (e.target.value === '') {
+      getPurchases();
     }
   };
 
@@ -39,19 +52,23 @@ export default function Purchases({ BASE_URL }) {
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           handleSearch={handleSearch}
+          handleOnChange={handleOnChange}
         />
       )}
-
-      <div className="purchase-container">
-        {Array.isArray(products) && products.length === 0 ? (
-          <h3>No Orders</h3>
-        ) : (
-          <h3>Orders</h3>
-        )}
-        {products.reverse().map((item) => {
-          return <PurchaseCard product={item} key={item.id} />;
-        })}
-      </div>
+      {!error ? (
+        <div className="purchase-container">
+          {Array.isArray(products) && products.length === 0 ? (
+            <h3>No Orders</h3>
+          ) : (
+            <h3>Orders</h3>
+          )}
+          {products.reverse().map((item) => {
+            return <PurchaseCard product={item} key={item.id} />;
+          })}
+        </div>
+      ) : (
+        <h3 style={{ textAlign: 'center' }}>Item not found</h3>
+      )}
     </div>
   );
 }

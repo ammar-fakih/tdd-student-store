@@ -5,6 +5,7 @@ export default function SearchBar({
   searchQuery,
   setSearchQuery,
   handleSearch = () => {},
+  handleOnChange = () => {},
 }) {
   return (
     <div className="searchbar-container">
@@ -12,6 +13,7 @@ export default function SearchBar({
         placeholder="Search Items"
         value={searchQuery}
         onChange={(e) => {
+          handleOnChange(e);
           setSearchQuery(e.target.value);
         }}
       />

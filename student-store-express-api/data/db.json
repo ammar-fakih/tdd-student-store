@@ -153,10 +153,14 @@
       "order": [
         {
           "itemId": 1,
-          "quantity": 5
+          "quantity": 3
+        },
+        {
+          "itemId": 2,
+          "quantity": 2
         }
       ],
-      "createdAt": "2022-06-30T22:09:26.606Z",
+      "createdAt": "2022-06-30T23:05:51.309Z",
       "receipt": {
         "userInfo": {
           "name": "Ammar Fakih",
@@ -164,9 +168,10 @@
         },
         "lines": [
           "Showing receipt for Ammar Fakih available at afakih@gmail.com:",
-          "5 total Rice Krispies purchased at a cost of $0.99 for a total cost of $4.95",
-          "Before taxes, the subtotal was $4.95.",
-          "After taxes and fees were applied, the total comes out to $5.383125."
+          "3 total Rice Krispies purchased at a cost of $0.99 for a total cost of $2.97",
+          "2 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $3",
+          "Before taxes, the subtotal was $5.97.",
+          "After taxes and fees were applied, the total comes out to $6.49."
         ],
         "productRows": [
           {
@@ -177,91 +182,102 @@
             "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
             "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
             "price": 0.99,
-            "quantity": 5,
-            "totalPrice": 4.95
+            "quantity": 3,
+            "totalPrice": 2.97
+          },
+          {
+            "id": 2,
+            "name": "Flamin Hot Cheetos",
+            "category": "food",
+            "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
+            "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
+            "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
+            "price": 1.5,
+            "quantity": 2,
+            "totalPrice": 3
           }
         ]
       }
     },
     {
       "id": 2,
-      "name": "Test Student",
-      "email": "test@email.com",
+      "name": "Ammar",
+      "email": "ammar.fakih02@gmail.com",
       "order": [
         {
-          "itemId": 1,
-          "quantity": 3
+          "itemId": 4,
+          "quantity": 20
         },
         {
-          "itemId": 2,
-          "quantity": 2
+          "itemId": 5,
+          "quantity": 10
         }
       ],
-      "createdAt": "2022-06-30T22:18:18.185Z",
+      "createdAt": "2022-06-30T23:32:13.891Z",
       "receipt": {
         "userInfo": {
-          "name": "Test Student",
-          "email": "test@email.com"
+          "name": "Ammar",
+          "email": "ammar.fakih02@gmail.com"
         },
         "lines": [
-          "Showing receipt for Test Student available at test@email.com:",
-          "3 total Rice Krispies purchased at a cost of $0.99 for a total cost of $2.9699999999999998",
-          "2 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $3",
-          "Before taxes, the subtotal was $5.97.",
-          "After taxes and fees were applied, the total comes out to $6.492374999999999."
+          "Showing receipt for Ammar available at ammar.fakih02@gmail.com:",
+          "20 total Coconut Water purchased at a cost of $3.25 for a total cost of $65",
+          "10 total Fruit Medley purchased at a cost of $7.5 for a total cost of $75",
+          "Before taxes, the subtotal was $140.",
+          "After taxes and fees were applied, the total comes out to $152.25."
         ],
         "productRows": [
           {
-            "id": 1,
-            "name": "Rice Krispies",
+            "id": 4,
+            "name": "Coconut Water",
             "category": "food",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
-            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
-            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
-            "price": 0.99,
-            "quantity": 3,
-            "totalPrice": 2.9699999999999998
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coconut_Drink%2C_Pangandaran.JPG/1920px-Coconut_Drink%2C_Pangandaran.JPG",
+            "source": "https://commons.wikimedia.org/wiki/Category:Coconut_water#/media/File:Coconut_Drink,_Pangandaran.JPG",
+            "description": "Somehow incredibly hydrating, while also not really being water.",
+            "price": 3.25,
+            "quantity": 20,
+            "totalPrice": 65
           },
           {
-            "id": 2,
-            "name": "Flamin Hot Cheetos",
+            "id": 5,
+            "name": "Fruit Medley",
             "category": "food",
-            "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
-            "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
-            "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
-            "price": 1.5,
-            "quantity": 2,
-            "totalPrice": 3
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fruits.png/640px-Fruits.png",
+            "source": "https://commons.wikimedia.org/wiki/File:Fruits.png",
+            "description": "More fruit than you know what to do with!",
+            "price": 7.5,
+            "quantity": 10,
+            "totalPrice": 75
           }
         ]
       }
     },
     {
       "id": 3,
-      "name": "Test 2 Student",
-      "email": "Test2@gmail.com",
+      "name": "Test Student",
+      "email": "testStudent@gmail.com",
       "order": [
         {
           "itemId": 1,
-          "quantity": 3
+          "quantity": 4
         },
         {
           "itemId": 2,
-          "quantity": 2
+          "quantity": 4
         }
       ],
-      "createdAt": "2022-06-30T22:21:50.832Z",
+      "createdAt": "2022-07-01T17:05:17.134Z",
       "receipt": {
         "userInfo": {
-          "name": "Test 2 Student",
-          "email": "Test2@gmail.com"
+          "name": "Test Student",
+          "email": "testStudent@gmail.com"
         },
         "lines": [
-          "Showing receipt for Test 2 Student available at Test2@gmail.com:",
-          "3 total Rice Krispies purchased at a cost of $0.99 for a total cost of $2.97",
-          "2 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $3",
-          "Before taxes, the subtotal was $5.97.",
-          "After taxes and fees were applied, the total comes out to $6.492374999999999."
+          "Showing receipt for Test Student available at testStudent@gmail.com:",
+          "4 total Rice Krispies purchased at a cost of $0.99 for a total cost of $3.96",
+          "4 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $6",
+          "Before taxes, the subtotal was $9.96.",
+          "After taxes and fees were applied, the total comes out to $10.83."
         ],
         "productRows": [
           {
@@ -272,8 +288,8 @@
             "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
             "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
             "price": 0.99,
-            "quantity": 3,
-            "totalPrice": 2.97
+            "quantity": 4,
+            "totalPrice": 3.96
           },
           {
             "id": 2,
@@ -283,135 +299,8 @@
             "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
             "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
             "price": 1.5,
-            "quantity": 2,
-            "totalPrice": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "name": "Test 5",
-      "email": "test3@gmail.com",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 3
-        },
-        {
-          "itemId": 2,
-          "quantity": 3
-        }
-      ],
-      "createdAt": "2022-06-30T22:22:26.451Z",
-      "receipt": {
-        "userInfo": {
-          "name": "Test 5",
-          "email": "test3@gmail.com"
-        },
-        "lines": [
-          "Showing receipt for Test 5 available at test3@gmail.com:",
-          "3 total Rice Krispies purchased at a cost of $0.99 for a total cost of $2.97",
-          "3 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $4.5",
-          "Before taxes, the subtotal was $7.47.",
-          "After taxes and fees were applied, the total comes out to $8.12."
-        ],
-        "productRows": [
-          {
-            "id": 1,
-            "name": "Rice Krispies",
-            "category": "food",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
-            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
-            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
-            "price": 0.99,
-            "quantity": 3,
-            "totalPrice": 2.97
-          },
-          {
-            "id": 2,
-            "name": "Flamin Hot Cheetos",
-            "category": "food",
-            "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
-            "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
-            "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
-            "price": 1.5,
-            "quantity": 3,
-            "totalPrice": 4.5
-          }
-        ]
-      }
-    },
-    {
-      "id": 5,
-      "name": "tests",
-      "email": "tets",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 3
-        }
-      ],
-      "createdAt": "2022-06-30T22:26:37.747Z",
-      "receipt": {
-        "userInfo": {
-          "name": "tests",
-          "email": "tets"
-        },
-        "lines": [
-          "Showing receipt for tests available at tets:",
-          "3 total Rice Krispies purchased at a cost of $0.99 for a total cost of $2.97",
-          "Before taxes, the subtotal was $2.97.",
-          "After taxes and fees were applied, the total comes out to $3.23."
-        ],
-        "productRows": [
-          {
-            "id": 1,
-            "name": "Rice Krispies",
-            "category": "food",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
-            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
-            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
-            "price": 0.99,
-            "quantity": 3,
-            "totalPrice": 2.97
-          }
-        ]
-      }
-    },
-    {
-      "id": 6,
-      "name": "fdafasdf",
-      "email": "fdafas",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 3
-        }
-      ],
-      "createdAt": "2022-06-30T22:27:34.912Z",
-      "receipt": {
-        "userInfo": {
-          "name": "fdafasdf",
-          "email": "fdafas"
-        },
-        "lines": [
-          "Showing receipt for fdafasdf available at fdafas:",
-          "3 total Rice Krispies purchased at a cost of $0.99 for a total cost of $2.97",
-          "Before taxes, the subtotal was $2.97.",
-          "After taxes and fees were applied, the total comes out to $3.23."
-        ],
-        "productRows": [
-          {
-            "id": 1,
-            "name": "Rice Krispies",
-            "category": "food",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
-            "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
-            "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
-            "price": 0.99,
-            "quantity": 3,
-            "totalPrice": 2.97
+            "quantity": 4,
+            "totalPrice": 6
           }
         ]
       }
